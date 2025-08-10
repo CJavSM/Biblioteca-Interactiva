@@ -4,12 +4,12 @@ import '../App.css'; // Importa estilos globales
 
 function ListaLibros() {
     // Extrae el array de categorías desde el JSON
-    const categorias = libros.categorias;
+    const categorias = libros.libros.categorias;
     // Estado para el tema seleccionado en el filtro; inicia en 'Todos'
     const [filtro, setFiltro] = useState('Todos');
     // Construye la lista de temas disponibles para el <select>
     // Incluye 'Todos' + cada nombre de categoría
-    const temasDisponibles =  ['Todos', categorias.map(cat => cat.nombre)];
+    const temasDisponibles =  ['Todos', ...categorias.map(cat => cat.nombre)];
     // Filtra los libros según el tema seleccionado:
     // 1) Filtro: si filtro es 'Todos', mantiene todas; si no, solo la categoría igual al filtro
     // 2) flatMap: de cada categoría filtrada extrae su array de libros
@@ -49,7 +49,7 @@ function ListaLibros() {
         target="_blank"
         rel="noopener noreferrer"
         >
-        Ver recurso hola 
+        Ver recurso 
         </a>
         </div>
         ))}
