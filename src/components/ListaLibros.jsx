@@ -49,7 +49,7 @@ function ListaLibros() {
         target="_blank"
         rel="noopener noreferrer"
         >
-        Ver recurso
+        Ver recurso hola 
         </a>
         </div>
         ))}
